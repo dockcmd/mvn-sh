@@ -1,7 +1,7 @@
 #!/bin/bash
 . shmod
 
-include github.com/dockcmd/shmod util.sh
+import dockcmd/sh v0.0.1 docker.sh
 
 # ensure .m2 directory created with current user
 if ! [ -d "$HOME/.m2" ] 
