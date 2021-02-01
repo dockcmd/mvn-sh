@@ -1,6 +1,6 @@
 #!/bin/bash
-. shmod
 
+. shmod
 import dockcmd/sh v0.0.1 docker.sh
 
 # ensure .m2 directory created with current user
