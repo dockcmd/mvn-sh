@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . shmod
-import dockcmd/sh v0.0.1 docker.sh
+import dockcmd/sh@v0.0.2 docker.sh
 
 # ensure .m2 directory created with current user
 if ! [ -d "$HOME/.m2" ] 
@@ -15,5 +15,5 @@ exec_or_dryrun \
   $(docker_user) \
   --mount type=bind,source=$HOME/.m2,target=/root/.m2,consistency=delegated \
   $(docker_home_workdir) \
-  $(docker_image dcmd/mvn v3.6.3) \
+  $(docker_image dcmd/mvn:v3.6.3) \
   "$@"
