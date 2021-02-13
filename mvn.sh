@@ -1,7 +1,6 @@
 #!/bin/bash
-
 . shmod
-import dockcmd/sh@v0.0.2 docker.sh
+import dockcmd/sh@v0.0.3 docker.sh
 
 # ensure .m2 directory created with current user
 if ! [ -d "$HOME/.m2" ] 
@@ -10,10 +9,9 @@ then
 fi
 
 # Maven call via docker
-exec_or_dryrun \
+shmod_exec \
   $(docker_run) \
   $(docker_user) \
-  --mount type=bind,source=$HOME/.m2,target=/root/.m2,consistency=delegated \
   $(docker_home_workdir) \
   $(docker_image dcmd/mvn:v3.6.3) \
   "$@"
