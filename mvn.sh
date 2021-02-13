@@ -9,4 +9,4 @@ then
 fi
 
 # Maven call via docker
-run `hwd= docker dcmd/mvn:v3.6.3) "$@"`
+run `hwm= docker dcmd/mvn:v3.6.3) "$@"`
