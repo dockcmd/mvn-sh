@@ -9,9 +9,4 @@ then
 fi
 
 # Maven call via docker
-run \
-  $(docker_run) \
-  $(docker_user) \
-  $(docker_home_workdir) \
-  $(docker_image dcmd/mvn:v3.6.3) \
-  "$@"
+run `hwd= docker dcmd/mvn:v3.6.3) "$@"`
