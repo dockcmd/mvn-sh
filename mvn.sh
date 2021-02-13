@@ -9,7 +9,7 @@ then
 fi
 
 # Maven call via docker
-shmod_exec \
+run \
   $(docker_run) \
   $(docker_user) \
   $(docker_home_workdir) \
